@@ -341,20 +341,22 @@ def getProduct_Request_Second_Html_price_customer(s):
     return "";
 
 def parse_List(content):
-    
-    tree=StringIO_ToTree(content)
-    if not tree:
-        return None
+    try:
+        tree=StringIO_ToTree(content)
+        if not tree:
+            return None
 
-    #第一步取得第二级页面的 url中间路径参数
-    #list=tree.xpath("//div/div/div/div/div/div/ul/li[@class='productNumberValue']/a/@href")
-    #for ll in list:
-    #   getProductRequestInfosecond(ll)
-    #第二步获取第二级页面价格、customer review所需参数
-    listPrice=tree.xpath("//div/div/div/div/div/div/ul/li[@class='priceValue']/div/a/@onclick")
-    for ll in listPrice:
-       getProduct_Request_Second_Html_price_customer(ll)          
+        #第一步取得第二级页面的 url中间路径参数
+        #list=tree.xpath("//div/div/div/div/div/div/ul/li[@class='productNumberValue']/a/@href")
+        #for ll in list:
+        #   getProductRequestInfosecond(ll)
+        #第二步获取第二级页面价格、customer review所需参数
+        listPrice=tree.xpath("//div/div/div/div/div/div/ul/li[@class='priceValue']/div/a/@onclick")
+        for ll in listPrice:
+           getProduct_Request_Second_Html_price_customer(ll)          
 
+    except Exception as ex:
+        print(ex)
     pass
 
 
