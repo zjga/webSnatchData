@@ -283,8 +283,6 @@ def run_one_by_one_price(url,pn,cat):
                    "X-Requested-With":"XMLHttpRequest",
                    "cookie":"JSESSIONID=B39B7B6464174A9F9591E43808AF317A.stltcat03; TLTUID=ADD4638A09D91009091CAB1C2EA6F5D4; GUID=b79af922-3ecf-4c3b-917b-bf4ea0994994|NULL|1426506067726; __unam=40e1073-1472b322e5b-1e6ef7e1-25; country=USA; SialLocaleDef=CountryCode~US|WebLang~-1|; SessionPersistence=CLICKSTREAMCLOUD%3A%3DvisitorId%3Danonymous%7CPROFILEDATA%3A%3Davatar%3D%2Fetc%2Fdesigns%2Fdefault%2Fimages%2Fcollab%2Favatar.png%2CisLoggedIn%3Dtrue%2CisLoggedIn_xss%3Dtrue%2CauthorizableId%3Danonymous%2CauthorizableId_xss%3Danonymous%2CformattedName%3D%2CformattedName_xss%3D%7CSURFERINFO%3A%3Dbrowser%3DUnresolved%2COS%3DWindows%2Cresolution%3D1366x768%2Ckeywords%3D%7C; _ga=GA1.2.1674815859.1405179022; __ar_v4=7LVJN6BSTJF53GX2R4GID7%3A20150315%3A20%7CJ7B5WUY6URABXKGK2JGKIC%3A20150315%3A20%7CQ4SKPJ6JAFAM3L6QZME5SD%3A20150315%3A20; TLTSID=B626435ACC9810CC000DD72A766B60AB;"
                   }
-        #data="loadFor=PRD_RS"        
-        #params = urllib.parse.urlencode({'loadFor': 'PRD_RS', 'productNumber': 'TX0277', 'brandKey': 'MM', 'divId': 'pricingContainerMessage'}).encode(encoding='UTF8')
 
         param = urllib.parse.urlencode({'loadFor':'PRD_RS'}).encode(encoding='UTF8')
 
