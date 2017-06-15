@@ -345,9 +345,10 @@ def parse_List(content):
             return None
 
         #第一步取得第二级页面的 url中间路径参数
-        #list=tree.xpath("//div/div/div/div/div/div/ul/li[@class='productNumberValue']/a/@href")
+        #list=tree.xpath("//div[@class='product-listing-outer']/div[@class='row clearfix']/ul/li[@class='productnumbervalue']/a/@href")
+        #list=tree.xpath("//div[@class='row clearfix']/ul/li[@class='productNumberValue']/a/@href")
         #for ll in list:
-        #   getProductRequestInfosecond(ll)
+        #   getproductrequestinfosecond(ll)
         #第二步获取第二级页面价格、customer review所需参数
         listPrice=tree.xpath("//div/div/div/div/div/div/ul/li[@class='priceValue']/div/a/@onclick")
         for ll in listPrice:
